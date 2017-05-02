@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PGPMob.Views.AutenticacaoPage">
+    
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="20">
+            <Entry x:Name="UserName" Placeholder="Usuário" Text="{Binding UserName}"  />
+            <Entry x:Name="Password" IsPassword="true" Placeholder="Senha" Text="{Binding Password}"/>
+            <Button Text="Login" Command="{Binding LoginCommand}" />
+            <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+        
+    </ContentPage.Content>
+    
+</ContentPage>
