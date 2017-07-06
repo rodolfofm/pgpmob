@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:PGPMob.Views;assembly=PGPMob"
              x:Class="PGPMob.Views.MainPage">
     <MasterDetailPage.Master>
-        <local:MasterPage x:Name="masterPage" />
+        <local:MenuPage x:Name="menuPage" />
     </MasterDetailPage.Master>
     <MasterDetailPage.Detail>
         <NavigationPage>

@@ -17,9 +17,9 @@ namespace PGPMob
             InitializeComponent();
             
             if (UsuarioAutenticado == null)
-                MainPage = new PGPMob.Views.AutenticacaoPage();
+                MainPage = new NavigationPage(new PGPMob.Views.AutenticacaoPage());
             else
-                MainPage = new PGPMob.Views.MainPage();
+                MainPage = new NavigationPage(new PGPMob.Views.MainPage());
         }
 
         #region ILoginManager implementation

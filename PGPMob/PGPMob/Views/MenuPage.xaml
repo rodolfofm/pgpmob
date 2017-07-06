@@ -1,15 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PGPMob.Views.MasterPage"
+             x:Class="PGPMob.Views.MenuPage"
              Padding="0,40,0,0"
-			 Title="Personal Organiser">
+			 Title="Menu"
+             Icon="menu.png"
+             >
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand">
+            <Label Text="Menu" FontSize="Large"></Label>
             <ListView x:Name="listView" VerticalOptions="FillAndExpand" SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ImageCell Text="{Binding Title}" ImageSource="{Binding IconSource}" />
+                        <ImageCell Text="{Binding Title}" ImageSource="{Binding IconSource}"  />
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

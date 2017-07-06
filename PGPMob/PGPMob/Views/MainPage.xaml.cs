@@ -12,7 +12,7 @@ namespace PGPMob.Views
             var pgpMobApiService = DependencyService.Get<Services.IPGPMobApiService>();
             BindingContext = new MainViewModel(pgpMobApiService);
 
-            masterPage.ListView.ItemSelected += OnItemSelected;
+            menuPage.ListView.ItemSelected += OnItemSelected;
 
             if (Device.OS == TargetPlatform.Windows)
             {
@@ -22,11 +22,11 @@ namespace PGPMob.Views
 
         void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var item = e.SelectedItem as MasterPageItem;
+            var item = e.SelectedItem as MenuPageItem;
             if (item != null)
             {
                 Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
-                masterPage.ListView.SelectedItem = null;
+                menuPage.ListView.SelectedItem = null;
                 IsPresented = false;
             }
         }
